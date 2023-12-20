@@ -103,7 +103,7 @@ resource "aws_iam_role" "role" {
   ################# creating dns records #################
   resource "aws_route53_record" "www" {
     zone_id = "Z01768852GJ4FV6EFJ9QG"
-    name    = "${var.component}.${var.env}"
+    name    = "${var.component}-${var.env}"
     type    = "A"
     ttl     = 300
     records = [aws_instance.web.private_ip]
