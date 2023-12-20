@@ -17,7 +17,7 @@ resource "aws_iam_policy" "policy" {
   })
 }
 
-resource "aws_iam_role" "test_role" {
+resource "aws_iam_role" "role" {
   name               = "${var.component}.${var.env}.ec2.Role"
   assume_role_policy = jsonencode({
     Version   = "2012-10-17"
