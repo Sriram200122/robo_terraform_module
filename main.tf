@@ -42,7 +42,7 @@ resource "aws_iam_role" "role" {
 
   ################ Policy attachment##############
   resource "aws_iam_role_policy_attachment" "attach" {
-    role       = "${var.component}.${var.env}"
+    role       = aws_iam_role.role.name
     policy_arn = aws_iam_policy.policy.arn
   }
 
