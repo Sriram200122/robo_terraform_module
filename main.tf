@@ -32,13 +32,13 @@ resource "aws_iam_role" "test_role" {
       },
     ]
   })
-  ]
 
   ################ I am instance profile#####################
   resource "aws_iam_instance_profile" "profile" {
     name = "${var.component}.${var.env}"
     role = aws_iam_role.role.name
   }
+
   ################ Policy attachment##############
   resource "aws_iam_role_policy_attachment" "attach" {
     role       = "${var.component}.${var.env}"
