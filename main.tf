@@ -69,8 +69,7 @@ resource "aws_iam_role" "role" {
         host     = aws_instance.web.public_ip
       }
       inline = [
-        "sudo labauto ansibword
-        le",
+        "sudo labauto ansible",
         "ansible-pull -i localhost, -U https://github.com/Suryakumari76k/robo-ansible roboshop.yml -e env=dev -e role_name=${var.component}"
       ]
     }
