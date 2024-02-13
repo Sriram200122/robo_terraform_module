@@ -70,7 +70,7 @@ resource "aws_iam_role" "role" {
       }
       inline = [
         "sudo labauto ansible",
-        "ansible-pull -i localhost, -U https://github.com/Suryakumari76k/robo-ansible roboshop.yml -e env=dev -e role_name=${var.component}"
+        "ansible-pull -i localhost, -U https://github.com/Sriram200122/robo-ansible roboshop.yml -e env=dev -e role_name=${var.component}"
       ]
     }
   }
